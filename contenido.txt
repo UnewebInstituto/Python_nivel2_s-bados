@@ -1,0 +1,560 @@
+#### Contenido del Curso de Git
+
+El curso de Git está diseñado para enseñarte a utilizar este sistema de control de versiones de manera efectiva, comenzando desde lo más básico hasta llegar a conceptos más avanzados. Aquí te presento un resumen del contenido que podrías encontrar en un curso típico de Git:
+
+1. **Introducción a Git**:
+   - Comprender qué es Git y su importancia en el desarrollo de software.
+   - Instalación y configuración inicial de Git en tu sistema.
+
+2. **Fundamentos de Git**:
+   - Creación de un repositorio local.
+   - Comandos básicos: `git init`, `git add`, `git commit`.
+   - Comprender el flujo de trabajo básico en Git.
+
+3. **Ramas y Fusión**:
+   - Cómo crear y gestionar ramas (`git branch`, `git checkout`).
+   - Fusión de ramas y resolución de conflictos.
+
+4. **Trabajo con Repositorios Remotos**:
+   - Clonar repositorios desde GitHub.
+   - Uso de `git push` y `git pull` para sincronizar cambios.
+   - Comprender el concepto de "fork" y "pull requests".
+
+5. **Herramientas Avanzadas**:
+   - Uso de `git rebase` y `git cherry-pick`.
+   - Configuración de hooks en Git para automatizar tareas.
+
+6. **Colaboración en Proyectos**:
+   - Cómo trabajar en equipo utilizando Git.
+   - Estrategias para manejar múltiples contribuciones y revisiones de código.
+
+7. **Prácticas Recomendadas**:
+   - Cómo escribir mensajes de commit efectivos.
+   - Estrategias para mantener un historial de cambios limpio y comprensible.
+
+8. **Recursos Adicionales**:
+   - Acceso a comunidades en línea para resolver dudas y compartir experiencias.
+   - Material complementario como guías y ejemplos prácticos.
+
+Este contenido te proporcionará una base sólida para comenzar a utilizar Git y GitHub en tus proyectos de desarrollo, permitiéndote gestionar tu código de manera eficiente y colaborar con otros desarrolladores.
+
+
+
+
+
+#### ¿Qué es Git Bash?
+
+**Git Bash** es una aplicación que proporciona una interfaz de línea de comandos (CLI) para utilizar Git en sistemas operativos Windows. Esta herramienta emula el entorno de la terminal de Unix, permitiendo a los usuarios ejecutar comandos de Git y gestionar repositorios de manera eficiente. 
+
+Con Git Bash, los desarrolladores pueden interactuar con Git de una forma similar a como lo harían en sistemas Linux o Unix, lo que facilita el manejo de proyectos y el control de versiones. A diferencia de otros sistemas de control de versiones que utilizan un repositorio central, Git permite que cada desarrollador tenga una copia completa del repositorio en su máquina local, lo que ofrece mayor flexibilidad y velocidad, especialmente en entornos colaborativos.
+
+Además, Git Bash incluye muchas utilidades de Unix, como SCP y SSH, lo que lo convierte en una herramienta poderosa para los desarrolladores que trabajan en Windows.
+
+#### Significado del Acrónimo "Bash" en Git Bash
+
+El acrónimo **Bash** significa **Bourne Again Shell**. Es un intérprete de comandos que se utiliza comúnmente en sistemas operativos Unix y Linux. Git Bash es una aplicación que proporciona una interfaz de línea de comandos para utilizar Git en Windows, emulando el entorno de Bash para que los usuarios puedan ejecutar comandos de Git y utilizar utilidades de Unix. 
+
+Bash permite a los usuarios interactuar con el sistema operativo a través de comandos escritos, facilitando tareas como la gestión de archivos y la ejecución de scripts.
+
+Comandos
+
+Clase 1
+
+1> git --version
+Obtener la versión instalada de git.
+
+2> git config --global user.name "HENRY DUQUE"
+Establecer en configuración global nombre del usuario,
+va entre comillas dobles (no por proyecto).
+
+3> git config --global user.email hduqueuneweb@gmail.com
+Establecer en configuración global correo electrónico,
+va sin comillas.
+
+4> git config --global core.editor "code --wait"
+Establecer Visual studio code como el editor a usar, así
+también que la terminal se quede esperando hasta que se 
+cierre el editor de texto.
+
+5> git config --global -e 
+Ver nuestro archivo de configuración global, utilizando
+para ello Visual Studio Code
+Una vez se cierra el archivo en el editor Visual Studio Code 
+se devuelve el control a la consola Bash
+
+6> git config --global core.autocrlf true (WINDOWS)
+   git config --global core.autocrlf input (MAC/LINUX)
+ATENCIÓN: CONFIGURACIÓN MUY IMPORTANTE core.autocrlf
+                           
+[USUARIO WINDOWS]<----->[SERVIDOR]<----->[USUARIO LINUX/MAC]
+      CR                                         LF
+      LF 
+
+Esta opción permite a los usuarios de Sistemas Operativos
+Windows, eliminar el carácter especial CR y dejar sólo LF,
+cuando se suben archivos al servidor y añadir este mismo 
+caracter, cuando se bajan los archivos desde el servidor.
+Para ello en la configuración la propiedad de core.autocrlf
+debe tener el valor de "true. 
+Para el caso de los usuarios de MAC/LINUX, deben tener la
+propiedad core.autocrlf en "input"
+
+7> git config -h
+Mostrar todas las configuraciones con las que se puede 
+jugar en git
+
+8> clear 
+Limpia la consola de la terminal de git Bash
+
+9> ls 
+Muestra los archivos y directorios contenidos en el disco 
+
+10> pwd
+Conocer en directorio nos encontramos ubicados
+
+11> cd directorio
+Permite cambiar de directorio o disco
+
+12> cd ..
+Permite retroceder un directorio 
+
+13> mkdir miweb
+Crea el directorio miweb, en la ubicación donde nos encontremos
+
+14> cd miweb
+Se accede al directorio miweb
+
+15> git init
+Se inicializa el directorio como un proyecto git
+
+16> ls 
+Este comando después de inicializado el proyecto no mostrará nada.
+Es necesario que se ejecute de la siguiente forma: 
+
+17>ls -a
+Mostrará todos los directorios, hasta el directorio oculto.
+
+18>cd .git
+Se accede al directorio git y si ejecutamos el comando ls, 
+se podrá observar el conjunto de directorios y archivos
+contenidos en la carpeta. En esta carpeta se encuentran los 
+detalles de implementación del proyecto, aquí se guardan las 
+versiones, ramas y commit del proyecto. Este directorio no 
+sube al servidor.
+
+19>cd ..
+Se retrocede un directorio para volver la directorio mieweb
+
+20> Flujo de trabajo a seguir
+
+COMPUTADOR ....... STAGE ....... COMMIT ....... SERVER
+
+data1.txt 
+data2.txt 
+
+git add : Permitirá seleccionar los archivos, que se quieren pasar a 
+          una etapa que se llama STAGE.
+git commit : Los archivos pasan del estado STAGE a COMMIT.
+git push : Los cambios comprometidos se pasarán a un servidor 
+           como GIT HUB
+
+Consideraciones:
+En caso de ser borrado un archivo del computador, este también debe ser 
+pasado al estado STAGE, empleando el comando "git add". Esto se hace para
+llevar el registro de cambios. Después se compromete "commit" y por 
+último se elimina del servidor.
+
+Se ejecuta el comando "code ." 
+Se abre el editor en el directorio en el cual nos encontramos y creamos
+el archivo "archivo1.txt"
+Colocamos el contenido:Mi curso de git
+
+21> git status
+Se verifica el estatus del directorio git del proyecto
+
+22> git add archivo1.txt
+Se añade el archivo
+Hacemos nuevamente
+git status
+
+23> Se crea un segundo archivo con otro contenido
+Por ejemplo:Mi próximo curso es de maven
+
+24> Nos devolvemos a la terminal y hacemos nuevamente
+git status
+y se añade
+git add archivo2.txt
+
+También se podía haber efectuado el comando:
+git add archivo1.txt archivo2.txt 
+Es decir separados por espacios en blanco.
+
+Se cambia el contenido del archivo2.txt
+
+Si se efectua nuevamente un consulta de estatus, se observará
+la siguiente información:
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   archivo1.txt
+        new file:   archivo2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   archivo2.txt
+
+Es decir hay añadir los cambios efectuados:
+
+25> git commit -m "Commit inicial"
+Se comprometen los archivos mediante commit y se coloca un 
+mensaje informativo, esto cambia los archivos del estado STAGE 
+y lo pasa a COMMIT. Se observa el siguiente estátus:
+
+$ git commit -m "Commit inicial"
+[master (root-commit) 231211d] Commit inicial
+ 2 files changed, 2 insertions(+)
+ create mode 100644 archivo1.txt
+ create mode 100644 archivo2.txt
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+
+26> Se hace una modificación sobre el archivo2.txt y posteriormente
+se procede a agregar
+git add archivo2.txt
+
+Realizamos la consulta respectiva:
+
+git status
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git add archivo2.txt
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   archivo2.txt
+
+27> Efectuamos el comando
+
+git commit (sólo)
+
+Y esto abrirá el editor, se efectúa la modificación y se guardan 
+los cambios en el archivo presentado.
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git commit
+[master d89d140] Modificación efectuada al archivo2.txt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Después efectuamos un git status: No hay nada pendiente
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+28> rm archivo2.txt
+Se procede a borrar archivo2.txt
+ls 
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ rm archivo2.txt
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ ls
+archivo1.txt
+
+Se realiza un git status
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    archivo2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+
+29> git add archivo2.txt
+Se añaden los cambios del archivo que fue borrado.
+
+git status
+Se hace un git status
+
+git commit -m "Se elimina el archivo 2"
+
+************************************
+
+Otra forma de hacerlo es:
+
+git rm archivo1.txt
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git rm archivo1.txt
+rm 'archivo1.txt'
+
+git status
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    archivo1.txt
+
+30> Para revertir el cambio, se realiza el siguiente comando:
+git restore --staged archivo1.txt
+
+30> git add archivo1.txt
+
+Resultado:
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    archivo1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git add archivo1.txt
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    archivo1.txt
+
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$
+
+31> git commit -m "Eliminando archivo 1"
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git commit -m:"Eliminando archivo 1"
+[master 1cf92ad] :Eliminando archivo 1
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 archivo1.txt
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+hduqu@LAPTOP-MVPLGMT2 MINGW64 /f/git_curso_presencial/miweb (master)
+$
+
+31> Recuperación del archivo. 
+(No se puede hacer después de efectuar commit)
+
+32> mv archivo1.txt archivo.txt
+Cambiar el nombre de un archivo.
+
+git status
+git add archivo.txt
+
+33> git commit -m "Renombrando archivo"
+
+34> git mv archivo.txt archivo1.txt
+Renombrar un archivo y de una vez se agrega a la etapa de stage.
+
+Posterior a ello efectuamos el commit
+
+git commit -m "Devolviendo el cambio del nombre del archivo"
+
+35> ¿Cómo configurar archivos para que estos no se incluyan 
+en el proceso de subir al repositorio?
+
+Se llama a nuestro editor:
+
+code .
+
+
+Se crea un archivo .env, con el siguiente contenido:
+
+password=1234567
+user=HENRY
+
+Y se guardan los cambios. Se consulta en GIT el estátus del archivo:
+
+git status
+
+Se podrá observar, que hay un archivo pendiente por añadir a la etapa
+de staged, lo que sebe hacer es si no se quiere añadir este archivo o 
+un directorio completo, se debe crear el archivo .gitignore y allí se 
+colocan los archivos a descartar. El contenido del archivo, será como 
+a continuación:
+
+.env
+node_modules/
+
+Se guarda, cuando se efectúe un git status, se observará que el archivo 
+.env, no aparece, ahora se procede a añadir el archivo gitignore, de la
+siguiente forma:
+
+git add .gitignore
+git commit -m "Agregando archivo gitignore"
+
+Hacemos el comando:
+
+git status
+
+Para este comando , también se tiene la alternativa:
+Pero antes, se deben efectuar modificaciones sobre el archivo pre existente
+y se añade el archivo2.txt
+Se vuelve a ejecutar el comando git status
+
+Ahora hacemos el comando de forma abreviada:
+
+git status -s
+
+Los cambios que no se hayan pasado a la etapa staged, se ven en color 
+rojo, ahora efectuamos el comando 
+
+git add .gitignore 
+
+y volvemos a consultar. Procedemos a añadir los demás archivos:
+git add archivo1.txt archivo2.txt
+
+Se observarán dos archivos modificados y uno recien añadido
+
+Efetuando el commit
+
+git commit -m "Mostrando estatus corto"
+
+36> Efectuamos modificaciones sobre archivo2.txt, añadiendo
+2 líneas y efectuamos el siguiente comando:
+
+gif diff
+
+Nos mostrará el resultado:
+
+SE OPRIME "q" PARA SALIR:
+
+Pasar los cambios al estado staged
+
+git add archivo2.txt
+
+Volver a efectuar el comando:
+Corresponde a todos los cambios que hemos escrito, pero aún no 
+se han pasado a la etapa de "staged"
+>git diff 
+
+Ahora veamos los cambios, que se encuentran en etapa de staged
+>git diff --staged
+
+Efectuamos la consulta del estátus de nuestro repositorio
+>git status
+
+37>git log
+Muestra el detalle de todos los commit efectuados
+
+38>git log --oneline
+Muestra el detalle de todos los commit efectuados resumido
+
+
+39> HASTA EL MOMENTO TODAS LAS ACTUALIZACIONES HAN SIDO LINEALES.
+VAMOS A VER COMO SE TRABAJA CON UNA RAMA (BRANCH), QUE DERIVA DE 
+LA RUTA PRINCIPAL O MASTER.
+restore archivo2.txt
+Se hace:
+>git status
+>git restore --staged archivo2.txt
+>git status
+>git restore archivo2.txt
+>clear
+
+40> Se consulta la rama en la cual se está trabajando
+>git branch
+La rama principal es MASTER
+
+COMO CREAR UNA RAMA NUEVA 
+
+>git checkout -b ramab
+
+Consultar nuevamente las ramas definidas:
+
+>git branch
+Se modifica el archivo2.txt
+
+>git add archivo2.txt
+>git status
+>git commit -m "Actualizando archivo 2"
+
+41> Se consula el contenido del log
+
+>git log --oneline
+
+Observamos, que nos encontramos a la cabeza en la ramab
+
+42> cat archivo2.txt
+Muestra el contenido del archivo2.txt que está en la rama "ramab"
+
+Ahora nos vamos a cambiar a la rama principal "master"
+>git checkout master
+>cat archivo2.txt
+Muestra el contenido del archivo2.txt que está en la rama "master"
+
+43> Traer los cambios de "ramab" a rama "master"
+Nos ubicamos en rama master y nos traemos los cambios
+>git merge ramab
+
+Volvemos a efectuar un cat de archivo2.txt
+
+44> ¿CÓMO SUBIR LOS CAMBIOS A LA NUBE?
+
+www.github.com
+UnewebInstituto
+hduqueuneweb@gmail.com
+02-08-2024	Lenovo-2024
+
+45> Crear una rama remota
+git checkout -b ramac
+git push -u origin ramac
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,585 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+help()
+
+Welcome to Python 3.12's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the internet at https://docs.python.org/3.12/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+help> modules
+
+Please wait a moment while I gather a list of all available modules...
+
+test_sqlite3: testing with SQLite version 3.42.0
+
+Warning (from warnings module):
+  File "C:\Python\Lib\site-packages\vboxapi-1.0-py3.12.egg\vboxapi\__init__.py", line 73
+SyntaxWarning: invalid escape sequence '\P'
+
+Warning (from warnings module):
+  File "C:\Python\Lib\site-packages\vboxapi-1.0-py3.12.egg\vboxapi\__init__.py", line 73
+SyntaxWarning: invalid escape sequence '\P'
+PyInstaller         aifc                idle                searchbase
+__future__          altgraph            idle_test           searchengine
+__hello__           antigravity         idlelib             secrets
+__main__            argparse            imaplib             select
+__phello__          array               imghdr              selectors
+_abc                ast                 importlib           setuptools
+_aix_support        asyncio             importlib_metadata  shelve
+_ast                atexit              inflect             shlex
+_asyncio            audioop             inspect             shutil
+_bisect             autocommand         io                  sidebar
+_blake2             autocomplete        iomenu              signal
+_bz2                autocomplete_w      ipaddress           site
+_codecs             autoexpand          itertools           six
+_codecs_cn          backports           json                smtplib
+_codecs_hk          base64              keyword             sndhdr
+_codecs_iso2022     bdb                 lib2to3             socket
+_codecs_jp          binascii            linecache           socketserver
+_codecs_kr          bisect              locale              sqlite3
+_codecs_tw          browser             logging             squeezer
+_collections        builtins            lzma                sre_compile
+_collections_abc    bz2                 macosx              sre_constants
+_compat_pickle      cProfile            mailbox             sre_parse
+_compression        calendar            mailcap             ssl
+_contextvars        calltip             mainmenu            stackviewer
+_csv                calltip_w           marshal             stat
+_ctypes             cgi                 math                statistics
+_ctypes_test        cgitb               mimetypes           statusbar
+_datetime           chunk               mmap                string
+_decimal            cmath               modulefinder        stringprep
+_distutils_hack     cmd                 more_itertools      struct
+_elementtree        code                msilib              subprocess
+_functools          codecontext         msvcrt              sunau
+_hashlib            codecs              multicall           symtable
+_heapq              codeop              multiprocessing     sys
+_imp                collections         mysql               sysconfig
+_io                 colorizer           mysqlx              tabnanny
+_json               colorsys            netrc               tarfile
+_locale             compileall          nntplib             telnetlib
+_lsprof             concurrent          nt                  tempfile
+_lzma               config              ntpath              test
+_markupbase         config_key          nturl2path          textview
+_md5                configdialog        numbers             textwrap
+_msi                configparser        numpy               this
+_multibytecodec     contextlib          opcode              threading
+_multiprocessing    contextvars         operator            time
+_mysql_connector    copy                optparse            timeit
+_opcode             copyreg             ordlookup           tkinter
+_operator           crypt               os                  token
+_osx_support        csv                 outwin              tokenize
+_overlapped         ctypes              packaging           tomli
+_pickle             curses              pandas              tomllib
+_py_abc             dataclasses         parenmatch          tooltip
+_pydatetime         datetime            pathbrowser         trace
+_pydecimal          dateutil            pathlib             traceback
+_pyinstaller_hooks_contrib dbm                 pdb                 tracemalloc
+_pyio               debugger            pefile              tree
+_pylong             debugger_r          percolator          tty
+_queue              debugobj            peutils             turtle
+_random             debugobj_r          pickle              turtledemo
+_sha1               decimal             pickletools         typeguard
+_sha2               delegator           pip                 types
+_sha3               difflib             pipes               typing
+_signal             dis                 pkg_resources       typing_extensions
+_sitebuiltins       doctest             pkgutil             tzdata
+_socket             dynoption           platform            undo
+_sqlite3            editor              platformdirs        unicodedata
+_sre                email               plistlib            unittest
+_ssl                encodings           poplib              urllib
+_stat               ensurepip           posixpath           util
+_statistics         enum                pprint              uu
+_string             errno               profile             uuid
+_strptime           faulthandler        pstats              vboxapi
+_struct             filecmp             pty                 vboxapisetup
+_symtable           fileinput           py_compile          venv
+_testbuffer         filelist            pyclbr              warnings
+_testcapi           fnmatch             pydoc               wave
+_testclinic         format              pydoc_data          weakref
+_testconsole        fractions           pyexpat             webbrowser
+_testimportmultiple ftplib              pymysql             wheel
+_testinternalcapi   functools           pyparse             win32ctypes
+_testmultiphase     gc                  pyshell             window
+_testsinglephase    genericpath         pytz                winreg
+_thread             getopt              query               winsound
+_threading_local    getpass             queue               wsgiref
+_tkinter            gettext             quopri              xdrlib
+_tokenize           glob                random              xml
+_tracemalloc        graphlib            re                  xmlrpc
+_typing             grep                redirector          xxsubtype
+_uuid               gzip                replace             zipapp
+_warnings           hashlib             reprlib             zipfile
+_weakref            heapq               rlcompleter         zipimport
+_weakrefset         help                rpc                 zipp
+_winapi             help_about          run                 zlib
+_wmi                history             runpy               zoneinfo
+_xxinterpchannels   hmac                runscript           zoomheight
+_xxsubinterpreters  html                sched               zzdummy
+_zoneinfo           http                scrolledlist        
+abc                 hyperparser         search              
+
+Enter any module name to get more help.  Or, type "modules spam" to search
+for modules whose name or summary contain the string "spam".
+
+help> 
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+
+import mysql.connector
+myDB = mysql.connector.connect(
+    host="locahost",
+    user="root",
+    passwd=""
+    )
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 482, in open_connection
+    addrinfos = socket.getaddrinfo(self.server_host,
+  File "C:\Python\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    myDB = mysql.connector.connect(
+  File "C:\Python\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 500, in open_connection
+    raise errors.InterfaceError(
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'locahost:3306' (11001 getaddrinfo failed)
+myDB = mysql.connector.connect(
+host="locahost",
+user="root",
+passwd="")
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 482, in open_connection
+    addrinfos = socket.getaddrinfo(self.server_host,
+  File "C:\Python\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    myDB = mysql.connector.connect(
+  File "C:\Python\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 500, in open_connection
+    raise errors.InterfaceError(
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'locahost:3306' (11001 getaddrinfo failed)
+
+
+
+
+myDB = mysql.connector.connect(
+host="locahost",
+user="root",
+passwd="")
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 482, in open_connection
+    addrinfos = socket.getaddrinfo(self.server_host,
+  File "C:\Python\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    myDB = mysql.connector.connect(
+  File "C:\Python\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 500, in open_connection
+    raise errors.InterfaceError(
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'locahost:3306' (11001 getaddrinfo failed)
+
+
+
+
+
+
+
+
+
+
+
+
+myDB = mysql.connector.connect(host="locahost",user="root",passwd="")
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 482, in open_connection
+    addrinfos = socket.getaddrinfo(self.server_host,
+  File "C:\Python\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    myDB = mysql.connector.connect(host="locahost",user="root",passwd="")
+  File "C:\Python\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 500, in open_connection
+    raise errors.InterfaceError(
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'locahost:3306' (11001 getaddrinfo failed)
+
+
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="")
+type(myDB)
+<class 'mysql.connector.connection.MySQLConnection'>
+myDB
+<mysql.connector.connection.MySQLConnection object at 0x00000278D3D15610>
+comando = myDB.cursor()
+comando.execute("CREATE DATABASE BDPYN2_HENRY")
+comando.execute("SHOW DATABASES LIKE '%bdpyn2%'")
+for bd in comando:
+    bd
+
+('bdpyn2_david',)
+('bdpyn2_edgar',)
+('bdpyn2_efrenyer',)
+('bdpyn2_henry',)
+('bdpyn2_martindlr',)
+for bd in comando:
+    bd
+
+myDB = mysql.connector.connect(host="locahost",user="root",passwd="",database="bdpyn2_henry")
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 482, in open_connection
+    addrinfos = socket.getaddrinfo(self.server_host,
+  File "C:\Python\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#32>", line 1, in <module>
+    myDB = mysql.connector.connect(host="locahost",user="root",passwd="",database="bdpyn2_henry")
+  File "C:\Python\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Python\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Python\Lib\site-packages\mysql\connector\network.py", line 500, in open_connection
+    raise errors.InterfaceError(
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on 'locahost:3306' (11001 getaddrinfo failed)
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="",database="bdpyn2_henry")
+comando = myDB.cursor()
+comando.execute("CREATE TABLE personas(cedula varchar(10), nombre varchar(30), apellido varchar(30), direccion text, fechanac date); create database bd_borrar")
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 551, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 493, in cmd_query
+    raise errors.InterfaceError(
+mysql.connector.errors.InterfaceError: Use cmd_query_iter for statements with multiple queries.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#35>", line 1, in <module>
+    comando.execute("CREATE TABLE personas(cedula varchar(10), nombre varchar(30), apellido varchar(30), direccion text, fechanac date); create database bd_borrar")
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 554, in execute
+    raise errors.InterfaceError(
+mysql.connector.errors.InterfaceError: Use multi=True when executing multiple statements
+comando.execute("CREATE TABLE personas(cedula varchar(10), nombre varchar(30), apellido varchar(30), direccion text, fechanac date)")
+comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment FIRST")
+Traceback (most recent call last):
+  File "<pyshell#37>", line 1, in <module>
+    comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment FIRST")
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 551, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 490, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1050 (42S01): Table 'personas' already exists
+comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment PRIMARY KEY FIRST")
+Traceback (most recent call last):
+  File "<pyshell#38>", line 1, in <module>
+    comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment PRIMARY KEY FIRST")
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 551, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 490, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1075 (42000): Incorrect table definition; there can be only one auto column and it must be defined as a key
+comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment PRIMARY KEY")
+comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment PRIMARY KEY")
+Traceback (most recent call last):
+  File "<pyshell#40>", line 1, in <module>
+    comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment PRIMARY KEY")
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 551, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 490, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1060 (42S21): Duplicate column name 'id'
+comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment PRIMARY KEY")
+comando.execute("ALTER TABLE personas ADD COLUMN id integer FIRST auto_increment PRIMARY KEY")
+comando.execute("ALTER TABLE personas ADD COLUMN id integer FIRST auto_increment PRIMARY KEY")
+Traceback (most recent call last):
+  File "<pyshell#43>", line 1, in <module>
+    comando.execute("ALTER TABLE personas ADD COLUMN id integer FIRST auto_increment PRIMARY KEY")
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 551, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 490, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'auto_increment PRIMARY KEY' at line 1
+comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment FIRST PRIMARY KEY")
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    comando.execute("ALTER TABLE personas ADD COLUMN id integer auto_increment FIRST PRIMARY KEY")
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 551, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 490, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'auto_increment PRIMARY KEY' at line 1
+comando.execute("ALTER TABLE personas ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST")
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    comando.execute("ALTER TABLE personas ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST")
+  File "C:\Python\Lib\site-packages\mysql\connector\cursor.py", line 551, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 490, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python\Lib\site-packages\mysql\connector\connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'PRIMARY KEY' at line 1
+comando.execute("ALTER TABLE personas ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST")
+comando.execute("ALTER TABLE personas ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST")
+sql = "INSERT INTO personas(cedula, nombre, apellido, direccion, fechanac) VALUES (%s, %s, %s, %s, %s)"
+sql
+'INSERT INTO personas(cedula, nombre, apellido, direccion, fechanac) VALUES (%s, %s, %s, %s, %s)'
+values = ('V1234567','ANA','VASQUEZ','SANTA FE','1960-08-25')
+comando.execute(sql, valores)
+Traceback (most recent call last):
+  File "<pyshell#51>", line 1, in <module>
+    comando.execute(sql, valores)
+NameError: name 'valores' is not defined. Did you mean: 'values'?
+valores = ('V1234567','ANA','VASQUEZ','SANTA FE','1960-08-25')
+comando.execute(sql, valores)
+myDB.commit()
+comando.lastrowid
+0
+comando.lastrowid()
+Traceback (most recent call last):
+  File "<pyshell#56>", line 1, in <module>
+    comando.lastrowid()
+TypeError: 'int' object is not callable
+comando.lastrowid
+0
+valores = ('V1234568','YOLANDA','TORTOZA','CATIA LA MAR','1975-09-15')
+comando.execute(sql, valores)
+comando.lastrowid
+0
+myDB.commit()
+comando.lastrowid
+0
+myDB.commit()
+myDB.close()
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="",database="bdpyn2_henry")
+comando = myDB.cursor()
+
+
+sql = "INSERT INTO personas(cedula, nombre, apellido, direccion, fechanac) VALUES (%s, %s, %s, %s, %s)"
+valores = ('V1234568','YOLANDA','TORTOZA','CATIA LA MAR','1975-09-15')
+comando.execute(sql, valores)
+myDB.commit()
+comando.lastrowid
+3
+valores1 = [('V1234565','LIBIA','COLS','GUARENAS','1980-06-15'),('E81001002','BRUCE','WILLIS','LOS ANGELES','1950-02-01'),('V9876543','NORMA','GAINFA','EL VALLE','1972-07-17')]
+valores1
+[('V1234565', 'LIBIA', 'COLS', 'GUARENAS', '1980-06-15'), ('E81001002', 'BRUCE', 'WILLIS', 'LOS ANGELES', '1950-02-01'), ('V9876543', 'NORMA', 'GAINFA', 'EL VALLE', '1972-07-17')]
+comando.executemany(sql, valores1)
+myBD.commit()
+Traceback (most recent call last):
+  File "<pyshell#77>", line 1, in <module>
+    myBD.commit()
+NameError: name 'myBD' is not defined
+myDB.commit()
+comando.rowcount
+3
+import conexion
+Traceback (most recent call last):
+  File "<pyshell#80>", line 1, in <module>
+    import conexion
+ModuleNotFoundError: No module named 'conexion'
+import sys
+miRuta = 'c:/PYTHON_NIVEL2_SAB_20241123/HENRY'
+try:
+    sys.path.index(miRuta)
+except:
+    sys.path.append(miRuta)
+
+    
+sys.path
+['', 'C:\\Python\\Lib\\idlelib', 'C:\\Python\\python312.zip', 'C:\\Python\\DLLs', 'C:\\Python\\Lib', 'C:\\Python', 'C:\\Python\\Lib\\site-packages', 'C:\\Python\\Lib\\site-packages\\vboxapi-1.0-py3.12.egg', 'C:\\Python\\Lib\\site-packages\\setuptools\\_vendor', 'C:\\Program Files\\Oracle\\VirtualBox\\sdk\\install\\', 'c:/PYTHON_NIVEL2_SAB_20241123/HENRY']
+import conexion
+
+=========== RESTART: C:\PYTHON_NIVEL2_SAB_20241123\HENRY\ingresar.py ==========
+Por favor ingrese los siguientes datos.
+Cédula:V12100200
+Nombre:MARIA
+Apellido:PEREZ
+Dirección:MONTALBAN
+Fecha nacimiento (AAAA-MM-DD):1998-09-20
+¿Desea ingresar los datos de otra persona (S/N)?N
+
+Warning (from warnings module):
+  File "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR\Ingresar_datos.py", line 3
+    miRuta_Pgm = "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR"
+SyntaxWarning: invalid escape sequence '\P'
+>>> 
+====== RESTART: C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR\Ingresar_datos.py =====
+Ingrese los datos solicitados...
+cedula:V21222333
+nombre:LINDA
+apellido:PEREZ
+direccion:CHACAITO
+Fecha nacimiento fomato AAAA-MM-DD:2000-01-20
+no se pudo realizar la operacion sobre la tabla
+Desea ingresar otra persona s/n: N
+
+Warning (from warnings module):
+  File "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR\Ingresar_datos.py", line 3
+    miRuta_Pgm = "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR"
+SyntaxWarning: invalid escape sequence '\P'
+>>> 
+Warning (from warnings module):
+  File "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR\Ingresar_datos.py", line 3
+    miRuta_Pgm = "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR"
+SyntaxWarning: invalid escape sequence '\P'
+>>> 
+Warning (from warnings module):
+  File "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR\Ingresar_datos.py", line 3
+    miRuta_Pgm = "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR"
+SyntaxWarning: invalid escape sequence '\P'
+>>> 
+====== RESTART: C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR\Ingresar_datos.py =====
+Ingrese los datos solicitados...
+cedula:V21999888
+nombre:MARIA
+apellido:DIAZ
+direccion:CHACAITO
+Fecha nacimiento fomato AAAA-MM-DD:2000-09-10
+Traceback (most recent call last):
+  File "C:\PYTHON_NIVEL2_SAB_20241123\MartinDLR\Ingresar_datos.py", line 19, in <module>
+    Conexion_mysql.comando(sql, valores)
+TypeError: 'MySQLCursor' object is not callable
+import Conexion_mysql
+
+========= RESTART: C:\PYTHON_NIVEL2_SAB_20241123\EdgarGil\ingresar.py =========
+Traceback (most recent call last):
+  File "C:\PYTHON_NIVEL2_SAB_20241123\EdgarGil\ingresar.py", line 7, in <module>
+    import conexion
+  File "C:\PYTHON_NIVEL2_SAB_20241123\EdgarGil\conexion.py", line 2, in <module>
+    myDB = mysql.connector(
+TypeError: 'module' object is not callable
+
+========= RESTART: C:\PYTHON_NIVEL2_SAB_20241123\EdgarGil\ingresar.py =========
+Por favor ingrese los siguientes datos.
+Cédula:
+Traceback (most recent call last):
+  File "C:\PYTHON_NIVEL2_SAB_20241123\EdgarGil\ingresar.py", line 10, in <module>
+    cedulaTmp = input("Cédula:")
+KeyboardInterrupt
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="",database="bdpyn2_henry")
+Traceback (most recent call last):
+  File "<pyshell#88>", line 1, in <module>
+    myDB = mysql.connector.connect(host="localhost",user="root",passwd="",database="bdpyn2_henry")
+NameError: name 'mysql' is not defined
+import mysql.connector
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="",database="bdpyn2_henry")
+comando = myDB.cursor()
+sql = "SELECT * FROM personas"
+comando.execute(sql)
+for data in comando:
+    data
+
+    
+(1, 'V1234567', 'ANA', 'VASQUEZ', 'SANTA FE', datetime.date(1960, 8, 25))
+(2, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15))
+(3, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15))
+(4, 'V1234565', 'LIBIA', 'COLS', 'GUARENAS', datetime.date(1980, 6, 15))
+(5, 'E81001002', 'BRUCE', 'WILLIS', 'LOS ANGELES', datetime.date(1950, 2, 1))
+(6, 'V9876543', 'NORMA', 'GAINFA', 'EL VALLE', datetime.date(1972, 7, 17))
+(7, 'V12100200', 'MARIA', 'PEREZ', 'MONTALBAN', datetime.date(1998, 9, 20))
+for data in comando:
+    data
+
+    
+comando.execute(sql)
+misdatos = comando.fetchall()
+comando
+<mysql.connector.cursor.MySQLCursor object at 0x000001F53E9EBF80>
+for data in comando:
+    data
+
+    
+misdatos
+[(1, 'V1234567', 'ANA', 'VASQUEZ', 'SANTA FE', datetime.date(1960, 8, 25)), (2, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15)), (3, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15)), (4, 'V1234565', 'LIBIA', 'COLS', 'GUARENAS', datetime.date(1980, 6, 15)), (5, 'E81001002', 'BRUCE', 'WILLIS', 'LOS ANGELES', datetime.date(1950, 2, 1)), (6, 'V9876543', 'NORMA', 'GAINFA', 'EL VALLE', datetime.date(1972, 7, 17)), (7, 'V12100200', 'MARIA', 'PEREZ', 'MONTALBAN', datetime.date(1998, 9, 20))]
+sql1 = "SELECT * FROM personas where cedula = %s"
+valor = ('E81001002',)
+comando.execute(sql1, valor)
+misdatos1 = comando.fetchall()
+misdatos1
+[(5, 'E81001002', 'BRUCE', 'WILLIS', 'LOS ANGELES', datetime.date(1950, 2, 1))]
+sql2 = "DELETE FROM personas where cedula = %s"
+comando.execute(sql2, valor)
+myDB.commit()
+comando.rowcount()
+Traceback (most recent call last):
+  File "<pyshell#113>", line 1, in <module>
+    comando.rowcount()
+TypeError: 'int' object is not callable
+comando.rowcount
+1

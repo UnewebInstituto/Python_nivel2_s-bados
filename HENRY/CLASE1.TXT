@@ -1,0 +1,131 @@
+https://uneweb.edu.ve/curso-de-python/
+
+Microsoft Windows [Versión 10.0.19045.4170]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\Profesor>cd\
+
+C:\>cd python_nivel2_sab_20241123
+
+C:\PYTHON_NIVEL2_SAB_20241123>cd henry
+
+C:\PYTHON_NIVEL2_SAB_20241123\HENRY>python -m pip install mysql-connector --force
+DEPRECATION: Loading egg at c:\python\lib\site-packages\vboxapi-1.0-py3.12.egg is deprecated. pip 24.3 will enforce this behaviour change. A possible replacement is to use pip for package installation.. Discussion can be found at https://github.com/pypa/pip/issues/12330
+Collecting mysql-connector
+  Downloading mysql-connector-2.2.9.tar.gz (11.9 MB)
+     ---------------------------------------- 11.9/11.9 MB 21.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Building wheels for collected packages: mysql-connector
+  Building wheel for mysql-connector (setup.py) ... done
+  Created wheel for mysql-connector: filename=mysql_connector-2.2.9-cp312-cp312-win_amd64.whl size=247960 sha256=f4aa340707280e22d326e64598357de42467c629e4efa7f27532568f2204b679
+  Stored in directory: c:\users\profesor\appdata\local\pip\cache\wheels\03\17\fa\d7604c72dd3dd6d3eb3d249abf36cc532c9a9b4354b8f1bc4f
+Successfully built mysql-connector
+Installing collected packages: mysql-connector
+Successfully installed mysql-connector-2.2.9
+
+[notice] A new release of pip is available: 23.3.1 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\PYTHON_NIVEL2_SAB_20241123\HENRY>
+
+Practica 1
+
+import mysql.connector
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="")
+
+type(myDB)
+<class 'mysql.connector.connection.MySQLConnection'>
+myDB
+<mysql.connector.connection.MySQLConnection object at 0x00000278D3D15610>
+
+*** Objeto para enviar instrucciones a la base de datos
+comando = myDB.cursor()
+
+comando.execute("CREATE DATABASE BDPYN2_HENRY")
+
+comando.execute("SHOW DATABASES LIKE '%bdpyn2%'")
+
+for bd in comando:
+    bd
+
+('bdpyn2_david',)
+('bdpyn2_edgar',)
+('bdpyn2_efrenyer',)
+('bdpyn2_henry',)
+('bdpyn2_martindlr',)
+for bd in comando:
+    bd
+
+# Conexión a base de datos específica
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="",database="bdpyn2_henry")
+
+*** Objeto para enviar instrucciones a la base de datos
+comando = myDB.cursor()
+
+comando.execute("CREATE TABLE personas(cedula varchar(10), nombre varchar(30), apellido varchar(30), direccion text, fechanac date)")
+
+comando.execute("ALTER TABLE personas ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY FIRST")
+
+sql = "INSERT INTO personas(cedula, nombre, apellido, direccion, fechanac) VALUES (%s, %s, %s, %s, %s)"
+
+valores = ('V1234568','YOLANDA','TORTOZA','CATIA LA MAR','1975-09-15')
+
+comando.execute(sql, valores)
+myDB.commit()
+comando.lastrowid
+
+
+valores1 = [('V1234565','LIBIA','COLS','GUARENAS','1980-06-15'),('E81001002','BRUCE','WILLIS','LOS ANGELES','1950-02-01'),('V9876543','NORMA','GAINFA','EL VALLE','1972-07-17')]
+
+comando.executemany(sql, valores1)
+
+myDB.commit()
+comando.rowcount
+
+import mysql.connector
+myDB = mysql.connector.connect(host="localhost",user="root",passwd="",database="bdpyn2_henry")
+comando = myDB.cursor()
+sql = "SELECT * FROM personas"
+comando.execute(sql)
+for data in comando:
+    data
+
+    
+(1, 'V1234567', 'ANA', 'VASQUEZ', 'SANTA FE', datetime.date(1960, 8, 25))
+(2, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15))
+(3, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15))
+(4, 'V1234565', 'LIBIA', 'COLS', 'GUARENAS', datetime.date(1980, 6, 15))
+(5, 'E81001002', 'BRUCE', 'WILLIS', 'LOS ANGELES', datetime.date(1950, 2, 1))
+(6, 'V9876543', 'NORMA', 'GAINFA', 'EL VALLE', datetime.date(1972, 7, 17))
+(7, 'V12100200', 'MARIA', 'PEREZ', 'MONTALBAN', datetime.date(1998, 9, 20))
+for data in comando:
+    data
+
+    
+comando.execute(sql)
+misdatos = comando.fetchall()
+comando
+<mysql.connector.cursor.MySQLCursor object at 0x000001F53E9EBF80>
+for data in comando:
+    data
+
+    
+misdatos
+[(1, 'V1234567', 'ANA', 'VASQUEZ', 'SANTA FE', datetime.date(1960, 8, 25)), (2, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15)), (3, 'V1234568', 'YOLANDA', 'TORTOZA', 'CATIA LA MAR', datetime.date(1975, 9, 15)), (4, 'V1234565', 'LIBIA', 'COLS', 'GUARENAS', datetime.date(1980, 6, 15)), (5, 'E81001002', 'BRUCE', 'WILLIS', 'LOS ANGELES', datetime.date(1950, 2, 1)), (6, 'V9876543', 'NORMA', 'GAINFA', 'EL VALLE', datetime.date(1972, 7, 17)), (7, 'V12100200', 'MARIA', 'PEREZ', 'MONTALBAN', datetime.date(1998, 9, 20))]
+sql1 = "SELECT * FROM personas where cedula = %s"
+valor = ('E81001002',)
+comando.execute(sql1, valor)
+misdatos1 = comando.fetchall()
+misdatos1
+[(5, 'E81001002', 'BRUCE', 'WILLIS', 'LOS ANGELES', datetime.date(1950, 2, 1))]
+sql2 = "DELETE FROM personas where cedula = %s"
+comando.execute(sql2, valor)
+myDB.commit()
+comando.rowcount()
+Traceback (most recent call last):
+  File "<pyshell#113>", line 1, in <module>
+    comando.rowcount()
+TypeError: 'int' object is not callable
+comando.rowcount
+1
+
